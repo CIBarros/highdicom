@@ -644,6 +644,9 @@ class DimensionIndexSequence(DataElementSequence):
             axis=0,
             return_index=True
         )
+        
+        if len(plane_sort_indices) == 1:
+            plane_sort_indices = list(range(len(plane_position_values)))
 
         return (plane_position_values, plane_sort_indices)
 

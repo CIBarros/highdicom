@@ -724,6 +724,8 @@ class Segmentation(SOPClass):
                 axis=0,
                 return_index=True
             )
+            if len(plane_sort_index) == 1:
+                plane_sort_index = list(range(len(plane_position_values)))
 
             # Get unique values of attributes in the Plane Position Sequence or
             # Plane Position Slide Sequence, which define the position of the
